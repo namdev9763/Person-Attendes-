@@ -1,5 +1,6 @@
 package com.FlynautSaaS.DuplicatePerson;
 
+import java.util.List;
 import java.util.Set;
 
 public class MainClass {
@@ -9,19 +10,17 @@ public class MainClass {
 		Conference conference = new Conference();
 
         // Add some attendees
-		 conference.addAttendee(new Person(1, "Alice", 30));
-	        conference.addAttendee(new Person(2, "Bob", 25));
-	        conference.addAttendee(new Person(3, "Charlie", 35));
-	        conference.addAttendee(new Person(1, "Alice", 30)); // Duplicate based on id
+		 conference.addAttendee(new Person(1, "Somu", 30));
+	        conference.addAttendee(new Person(2, "Gomu", 25));
+	        conference.addAttendee(new Person(3, "Tomu", 35));
+	        conference.addAttendee(new Person(1, "Gomu", 30)); 
 	        
 	        // Print all attendees
 	        System.out.println("All Attendees:");
-	        conference.printAllAttendees();
-	        
-	        
+	        conference.printAllAttendees(); 
 
         // Find duplicate attendees
-        Set<Person> duplicates = conference.findDuplicateAttendees();
+        List<Person> duplicates = conference.findDuplicateAttendees();
         System.out.println("Duplicate Attendees: " + duplicates);
 
         // List unique attendees
